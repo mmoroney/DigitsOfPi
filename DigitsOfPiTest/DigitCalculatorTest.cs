@@ -29,7 +29,7 @@ namespace DigitsOfPiTest
 
             for (int start = 0; start < expected.Length; start++)
             {
-                for(int count = 0; count < expected.Length - start - 1; count++)
+                for(int count = 0; count < expected.Length - start; count++)
                 {
                     byte[] digits = DigitCalculator.GetDigits(start, count);
                     for (int i = 0; i < digits.Length; i++)
