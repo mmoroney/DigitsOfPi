@@ -32,6 +32,8 @@ namespace DigitsOfPiTest
                 for(int count = 0; count < expected.Length - start; count++)
                 {
                     byte[] digits = DigitCalculator.GetDigits(start, count);
+                    Assert.AreEqual(count, digits.Length);
+
                     for (int i = 0; i < digits.Length; i++)
                     {
                         Assert.AreEqual(expected[start + i], digits[i]);
